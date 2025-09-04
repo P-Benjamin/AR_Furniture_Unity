@@ -1,0 +1,4 @@
+git clone https://github.com/P-Benjamin/AR_Furniture_Unity
+cd AR_Furniture_Unity
+git lfs install
+git lfs pull
