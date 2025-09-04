@@ -1,0 +1,41 @@
+# Unity — dossiers générés
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+SysInfo.txt
+
+# IDE / caches
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.pidb
+*.unityproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Android / iOS exports
+*.apk
+*.aab
+*.ipa
+ExportedProject/
+
+# Paquets & archives locales
+*.unitypackage
+*.zip
+*.7z
+
+# Garder ces dossiers versionnés
+!Assets/
+!Packages/
+!ProjectSettings/
