@@ -1,26 +1,32 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
-    [SerializeField] private string arSceneName = "ARScene"; // mets ici le nom EXACT de ta scène AR
+    public string arSceneName = "ARScene";  
+    public GameObject loadingOverlay;        
 
-    // Appelé par le bouton "Lancer l'AR"
-    public void StartAR()
+    public void PlayAR()
     {
-        // Optionnel : petit son de clic, transition, etc.
-        SceneManager.LoadScene(arSceneName);
+        if (loadingOverlay)
+        {
+            loadingOverlay.transform.SetAsLastSibling();
+            loadingOverlay.SetActive(true);
+        }
+        StartCoroutine(LoadAsync(arSceneName));
     }
-
-    // Appelé par le bouton "Quitter"
-    public void QuitApp()
+    public void Quit()
     {
-        // En build
-        Application.Quit();
-
-        // Dans l’éditeur (pour tester)
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
 #endif
+    }
+    System.Collections.IEnumerator LoadAsync(string scene)
+    {
+        yield return new WaitForSecondsRealtime(3f); 
+        var op = SceneManager.LoadSceneAsync(scene);
+        while (!op.isDone) yield return null;
     }
 }
