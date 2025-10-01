@@ -1,0 +1,2 @@
+C:\Users\Utilisateur\Documents\IPI\git\AR_Furniture_Unity\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Utilisateur\Documents\IPI\git\AR_Furniture_Unity\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
