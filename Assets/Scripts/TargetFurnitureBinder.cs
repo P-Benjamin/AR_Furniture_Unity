@@ -4,9 +4,9 @@ using System.Collections;
 
 public class TargetVisibilityController : MonoBehaviour
 {
-    public GameObject contentRoot;      // parent du modèle à montrer/cacher
-    public FurnitureItem furnitureItem; // ton script du modèle (gestes, etc.)
-    public float hideDelay = 0.05f;     // petit délai pour éviter le clignotement
+    public GameObject contentRoot;      
+    public FurnitureItem furnitureItem; 
+    public float hideDelay = 0.05f;     
 
     ObserverBehaviour obs;
     Coroutine hideCo;
@@ -25,7 +25,7 @@ public class TargetVisibilityController : MonoBehaviour
 
     void OnStatusChanged(ObserverBehaviour b, TargetStatus s)
     {
-        bool shouldShow = s.Status == Status.TRACKED; // STRICT: seulement TRACKED
+        bool shouldShow = s.Status == Status.TRACKED; 
 
         if (shouldShow)
         {

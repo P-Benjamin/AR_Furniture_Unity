@@ -8,7 +8,7 @@ public class InfoPanelController : MonoBehaviour
     public static InfoPanelController I;
 
     [Header("Réfs UI")]
-    public GameObject root;            // Panel parent (désactivé par défaut)
+    public GameObject root;           
     public TMP_Text titleText;
     public TMP_Text descriptionText;
     public TMP_Text dimensionsText;

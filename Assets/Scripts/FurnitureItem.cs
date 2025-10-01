@@ -3,15 +3,15 @@ using UnityEngine;
 public class FurnitureItem : MonoBehaviour
 {
     public string displayName = "Meuble";
-    public MaterialCycler cycler;        // ton cycler avec paillettes
-    public OrbitPinchTwist manip;        // rotation/pinch
+    public MaterialCycler cycler;  
+    public OrbitPinchTwist manip;        
     void Awake()
     {
-        if (manip) manip.enabled = false;   // activé seulement si "courant"
+        if (manip) manip.enabled = false;   
     }
 
     public void SetSelected(bool on)
     {
-        if (manip) manip.enabled = on;      // seul l'objet sélectionné reçoit les gestes
+        if (manip) manip.enabled = on;     
     }
 }

@@ -9,16 +9,14 @@ public class ClickInspector : MonoBehaviour
 
     void Update()
     {
-        // Souris (éditeur)
         if (Input.GetMouseButtonDown(0))
         {
             TryShowAt(Input.mousePosition);
         }
-        // Mobile (touch)
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             var t = Input.GetTouch(0);
-            TryShowAt(t.position); // TEMP: on ignore l'UI pour tester        
+            TryShowAt(t.position);       
         }
         }
 

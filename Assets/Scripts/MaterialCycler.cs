@@ -2,23 +2,18 @@ using UnityEngine;
 
 public class MaterialCycler : MonoBehaviour
 {
-    [Header("Audio")]
     public AudioClip sound;
     public AudioSource audioSrc;
 
-    [Header("Renderers à modifier (laisser vide = auto)")]
     public Renderer[] targets;
 
-    [Header("Matériaux à parcourir")]
     public Material[] variants;
 
-    [Header("Options")]
     public bool autoFindInChildren = true;
-    public bool instancePerObject = true; // renderer.material vs sharedMaterial
-    public int materialSlot = -1;        // -1 = tous les slots; sinon 0/1/2...
+    public bool instancePerObject = true; 
+    public int materialSlot = -1;        
     public bool verboseLogs = true;
 
-    [Header("VFX Paillettes")]
     public ParticleSystem glitterPrefab;
     public bool glitterPerRenderer = false;
     public Vector3 glitterOffset = Vector3.zero;
