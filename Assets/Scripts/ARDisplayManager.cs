@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using System.IO;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.WSA;
 
 public class ARDisplayManager : MonoBehaviour
 {

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
-using static UnityEditor.PlayerSettings;
 
 public class ClickInspector : MonoBehaviour
 {
@@ -28,13 +26,5 @@ public class ClickInspector : MonoBehaviour
             var link = hit.collider.GetComponentInParent<ObjectInfoLink>();
             if (link) link.ShowInfo();
         }
-    }
-
-    bool IsOverUI(int pointerId)
-    {
-        if (EventSystem.current == null) return false;
-        return pointerId >= 0
-            ? EventSystem.current.IsPointerOverGameObject(pointerId)
-            : EventSystem.current.IsPointerOverGameObject();
     }
 }
